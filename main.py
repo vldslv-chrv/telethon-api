@@ -5,8 +5,8 @@ import os
 app = FastAPI()
 
 # Получение переменных из окружения
-api_id = int(os.getenv("24053529"))
-api_hash = os.getenv("62b1700ac5981aece37890c54fbfdf1a")
+api_id = int(os.getenv("TG_API_ID"))
+api_hash = os.getenv("TG_API_HASH")
 
 @app.get("/channel-posts")
 def get_posts(channel: str = Query(..., alias="channel")):
